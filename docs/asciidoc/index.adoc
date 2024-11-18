@@ -1,0 +1,47 @@
+= User Service API Documentation
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+== Overview
+This is the documentation for the User Service REST API.
+
+== APIs
+
+=== Create User
+.request
+include::{snippets}/create-user/http-request.adoc[]
+
+.response
+include::{snippets}/create-user/http-response.adoc[]
+
+=== Get User
+.request
+include::{snippets}/get-user/http-request.adoc[]
+
+.response
+include::{snippets}/get-user/http-response.adoc[]
+
+=== Get All Users
+.request
+include::{snippets}/get-all-users/http-request.adoc[]
+
+.response
+include::{snippets}/get-all-users/http-response.adoc[]
+
+=== Update User
+.request
+include::{snippets}/update-user/http-request.adoc[]
+
+.response
+include::{snippets}/update-user/http-response.adoc[]
+
+=== Delete User
+.request
+include::{snippets}/delete-user/http-request.adoc[]
+
+.response
+include::{snippets}/delete-user/http-response.adoc[]
