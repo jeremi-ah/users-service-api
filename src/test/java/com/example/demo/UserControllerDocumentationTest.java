@@ -45,7 +45,7 @@ public class UserControllerDocumentationTest {
 
     @BeforeEach
     void setUp() {
-        testUser = new User(1L, "John Doe", "john@example.com");
+        testUser = new User(1L, "Jeremiah, wafula", "jeremiah@example.com");
     }
 
     @Test
@@ -109,11 +109,12 @@ public class UserControllerDocumentationTest {
     @Test
     void updateUser() throws Exception {
         User updatedUser = new User(1L, "John Updated", "john.updated@example.com");
+        String updatedUserJson=objectMapper.writeValueAsString(updatedUser);
         when(userService.updateUser(eq(1L), any(User.class))).thenReturn(updatedUser);
 
         mockMvc.perform(put("/api/users/{id}", 1L)
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(updatedUser)))
+                .content(updatedUserJson))
                 .andExpect(status().isOk())
                 .andDo(document("update-user",
                         preprocessRequest(prettyPrint()),
