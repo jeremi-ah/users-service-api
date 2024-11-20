@@ -1,0 +1,9 @@
+@startuml
+participant "UserService.getAllUsers()"
+UserService.getAllUsers() -> UserService.getAllUsers() : Execution Time: 441ms
+participant "UserService.getUserById(..)"
+UserService.getUserById(..) -> UserService.getUserById(..) : Execution Time: 33ms
+participant "UserService.deleteUser(..)"
+UserService.deleteUser(..) -> UserService.deleteUser(..) : Execution Time: 97ms
+participant "UserService.updateUser(..)"
+UserService.updateUser(..) -> UserService.updateUser(..) : Execution Time: 49ms

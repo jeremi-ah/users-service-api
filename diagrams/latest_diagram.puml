@@ -1,0 +1,4 @@
+@startuml
+participant "UserService.getUserById(..)"
+UserService.getUserById(..) -> UserService.getUserById(..) : Execution Time: 8ms
+@enduml
